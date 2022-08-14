@@ -22,7 +22,18 @@ function App() {
   return (
     <div className="max-w-md mx-auto bg-gray-100 p-3 h-screen flex flex-col">
       <div className="flex items-center justify-between mb-5 border-b py-2">
-        <h1 className="text-xl font-semibold ">Hello Mango Chat</h1>
+        {user ? (
+          <div className="flex gap-2 items-center">
+            <img
+              className="w-10 h-10 rounded-full object-cover"
+              src={user?.photoURL}
+              alt=""
+            />
+            <h1 className="text-xl font-semibold ">{user?.displayName}</h1>
+          </div>
+        ) : (
+          <h1 className="text-xl font-semibold ">Hello Mango Chat</h1>
+        )}
         {user && (
           <button
             type="button"

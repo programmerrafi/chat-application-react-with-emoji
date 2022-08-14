@@ -133,7 +133,7 @@ function Chat({ user }) {
 
   return (
     <div className="relative flex-grow h-[85vh] bg-gray-50 rounded-md flex flex-col">
-      <div className="flex-grow flex flex-col-reverse overflow-auto max-h-full p-3">
+      <div className="flex-grow flex flex-col-reverse overflow-auto no-scrollbar max-h-full p-3">
         <div ref={endOfMessage} />
         {messages?.map((chat) => renderChat(chat))}
       </div>
